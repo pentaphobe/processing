@@ -898,6 +898,8 @@ public class Texture implements PConstants {
       data = bufferCache.remove(0);
     } catch (NoSuchElementException ex) {
       PGraphics.showWarning("Don't have pixel data to copy to texture");
+    } catch (IndexOutOfBoundsException ex) {
+      PGraphics.showWarning("Don't have pixel data to copy to texture");
     }
 
     if (data != null) {
